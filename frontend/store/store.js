@@ -1,7 +1,8 @@
 import { createStore } from 'redux';
-import pokemonReducer from '../reducers/pokemon_reducer';
+import RootReducer from '../reducers';
+import MasterMiddleware from '../middleware';
 
-const configureStore = () => createStore(pokemonReducer);
+const configureStore = () => createStore(RootReducer, {},  MasterMiddleware);
 
 
 export default configureStore;
